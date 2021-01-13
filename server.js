@@ -6,7 +6,7 @@ const mongoose = require('mongoose');
 const todoRoutes = require('./todo.routes');
 const PORT = 4000;
 
-app.use(cors);
+//app.use(cors);
 app.use(bodyParser.json());
 app.use('/todos', todoRoutes);
 
@@ -20,7 +20,7 @@ const connection = mongoose.connection;
 
 connection.once('open', () => console.log('MongoDB database connection stablished successfully'));
 
-app.route('/').get((request, response)  => {
+app.get('/', (request, response)  => {
     response.send('Server on.');
 });
 

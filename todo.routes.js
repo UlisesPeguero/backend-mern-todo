@@ -35,7 +35,7 @@ todoRoutes.route('/add').post((request, response) => {
         });
 });
 
-todoRoutes.route('/update/:id').get((request, response) => {
+todoRoutes.route('/update/:id').post((request, response) => {
     Todo.findById(request.params.id, (error, todo) => {
         if(!todo) {
             console.log(error);
