@@ -24,4 +24,5 @@ app.get('/', (request, response)  => {
     response.send('Express server [on].');
 });
 
+// start server
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
