@@ -9,7 +9,6 @@ function returnJson(error, response, object) {
             error: error.message
         });
     } else {
-        console.log(object);
         response.json(object);
     }
 }
